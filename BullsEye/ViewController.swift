@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        currentValue = lroundf(slider.value)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +24,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert() {
+//        let message = "The value of the slider is: \(currentValue)"
+        
         let alert = UIAlertController(title: "Hello, World",
                                       message: "This is my first app",
                                       preferredStyle: .alert)
@@ -32,6 +37,10 @@ class ViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
         
+    }
+    
+    @IBAction func sliderMoved(_ slider: UISlider) {
+        print("The value of the slider is now: \(slider.value)")
     }
     
 }
